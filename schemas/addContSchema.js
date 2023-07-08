@@ -5,7 +5,5 @@ const addSchema = Joi.object({
   phone: Joi.string().required(),
   favorite: Joi.boolean().required(),
 });
-const toggleFavoriteSchema = Joi.object({
-  favorite: Joi.boolean().required(),
-});
-module.exports = { addSchema, toggleFavoriteSchema };
+
+module.exports = addSchema;
