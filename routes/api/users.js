@@ -19,4 +19,6 @@ const upload = multer({ storage: storage });
 const router = express.Router();
 const contrs = require("../../controllers/users");
 router.patch("/avatar", auth, upload.single("avatar"), contrs.uploadAvatar);
+router.post("/verify", contrs.secondVerification);
+
 module.exports = router;

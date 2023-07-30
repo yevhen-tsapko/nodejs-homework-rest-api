@@ -9,4 +9,5 @@ router.post("/login", validateBody(loginSchema), contrs.login);
 router.post("/logout", auth, contrs.logout);
 router.get("/current", auth, contrs.getUser);
 router.post("/current", auth, contrs.uploadAvatar);
+router.get("/verify/:verificationToken", contrs.verToken);
 module.exports = router;
